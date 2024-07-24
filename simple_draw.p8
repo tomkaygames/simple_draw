@@ -64,6 +64,11 @@ function _draw()
 
 	cls()
 
+-- draw pixels
+	for i in all(parts) do
+		circfill(i.x,i.y,i.r,clr)
+	end
+
 -- draw player pointer
 	if btn(🅾️) then
 		spr(1,p.x,p.y)
@@ -73,12 +78,9 @@ function _draw()
 		spr(0,p.x,p.y)
 	end
 
--- draw pixels
-	for i in all(parts) do
-		circfill(i.x,i.y,i.r,clr)
-	end
-
 end
+
+
 
 
 function add_part()
